@@ -1,0 +1,9 @@
+#test
+#Tue Jul 07 15:35:49 CST 2015
+company=IBM
+location=China,Shanghai
+port=3306
+user=root
+hostname=nathan-pc
+password=123456
+ip=192.168.0.132
