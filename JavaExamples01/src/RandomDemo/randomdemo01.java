@@ -28,6 +28,7 @@ public class randomdemo01 {
 		
 		//Math 的 random() 方法，还有一个 java.util.Random 类
 		System.out.println(Math.random());
+		
 	}
 
 }

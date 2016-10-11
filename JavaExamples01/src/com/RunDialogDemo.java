@@ -92,5 +92,6 @@ public class RunDialogDemo extends JFrame {
 		JButton btnNewButton_2 = new JButton("浏览");
 		btnNewButton_2.setBounds(361, 130, 73, 23);
 		contentPane.add(btnNewButton_2);
+		
 	}
 }
