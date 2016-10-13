@@ -1,5 +1,8 @@
 package DateAndCalendar;
 
+import java.util.Date;
+import java.util.Locale;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.TimeZone;
 
@@ -21,6 +24,16 @@ public class TimeZoneDemo01 {
 		//获取系统默认时区的ID
 		System.out.println(tz.getID()); //Asia/Shanghai
 		System.out.println(tz.getDisplayName()); //China Standard Time
+		
+		Locale locale = new Locale("zh-CN", "China");
+		String lang = locale.getLanguage();
+		System.out.println(lang);
+		String country = locale.getCountry();
+		System.out.println(country);
+		
+		System.out.println(new Date().toString());
+		//使用 SimpleDateFormat 类格式化日期
+		System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
 
 	}
 

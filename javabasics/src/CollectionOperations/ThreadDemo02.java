@@ -6,11 +6,11 @@ public class ThreadDemo02 extends Thread{
 
 	@Override
 	public void run() {
-		for (int row = 1000; row >0; row--) {
+		for (int row = 10; row >0; row--) {
 
 			for (int i = 0; i <row; i++) {
 
-				System.out.print("*");
+				System.out.print("a");
 
 			}
 
