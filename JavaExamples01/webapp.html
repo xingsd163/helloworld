@@ -1,0 +1,236 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta property="qc:admins" content="465267610762567726375" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Java 实例 &#8211; 网页抓取 | 菜鸟教程</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="canonical" href="http://www.runoob.com/java/net-webpage.html" />
+<meta name="keywords" content="Java 实例 &#8211; 网页抓取">
+<meta name="description" content="Java 实例 - 网页抓取   Java 实例   以下实例演示了如何使用 net.URL 类的 URL() 构造函数来抓取网页：  /*  author by w3cschool.cc  Main.java  */  import java.io.BufferedReader; import java.io.BufferedWriter; import java.io.FileWriter; import java.io.Input..">
+<link rel="shortcut icon" href="http://www.runoob.com/favicon.ico" mce_href="http://www.runoob.com/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="http://www.runoob.com/wp-content/themes/runoob/style.css?v=1.02" type="text/css" media="all" />
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/fontawesome/4.2.0/css/font-awesome.min.css" media="all" />
+<script src="http://cdn.static.runoob.com/libs/jquery/1.8.1/jquery.min.js"></script>
+<!--[if lt IE 9]>
+     <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <![endif]-->
+<link rel="apple-touch-icon" href="http://static.runoob.com/images/icon/mobile-icon.png"/>
+<meta name="apple-mobile-web-app-title" content="菜鸟教程">
+</head>
+<body>
+<div class="container logo-search">
+<div class="col search row-search-mobile">
+<form action="index.php">
+<input class="placeholder" value="搜索……" name="s" autocomplete="off">
+</form>
+</div>
+<div class="row">
+<div class="col logo">
+<h1><a href="/">菜鸟教程 -- 学的不仅是技术，更是梦想！</a></h1>
+</div>
+<div class="col right-list">
+<button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull" style=""> <i class="fa fa-navicon"></i> </button>
+</div>
+<div class="col search search-desktop last">
+<form action="http://www.runoob.com/" target="_blank">
+<input class="placeholder" id="s" name="s" value="搜索……" autocomplete="off">
+</form>
+</div>
+</div>
+</div>
+<div class="container navigation">
+<div class="row">
+<div class="col nav">
+<ul class="pc-nav">
+<li><a href="http://www.runoob.com/">首页</a></li>
+<li><a href="/html/html-tutorial.html">HTML</a></li>
+<li><a href="/css/css-tutorial.html">CSS</a></li>
+<li><a href="/js/js-tutorial.html">JavaScript</a></li>
+<li><a href="/jquery/jquery-tutorial.html">jQuery</a></li>
+<li><a href="/bootstrap/bootstrap-tutorial.html">Bootstrap</a></li>
+<li><a href="/sql/sql-tutorial.html">SQL</a></li>
+<li><a href="/mysql/mysql-tutorial.html">MySQL</a></li>
+<li><a href="/php/php-tutorial.html">PHP</a></li>
+<li><a href="/python/python-tutorial.html">Python</a></li>
+<li><a href="/cprogramming/c-tutorial.html">C</a></li>
+<li><a href="/cplusplus/cpp-tutorial.html">C++</a></li>
+<li><a href="/csharp/csharp-tutorial.html">C#</a></li>
+<li><a href="/java/java-tutorial.html">Java</a></li>
+<li><a href="/ruby/ruby-tutorial.html">Ruby</a></li>
+<li><a href="/sitemap">更多……</a></li>
+</ul>
+<ul class="mobile-nav">
+<li><a href="http://www.runoob.com/">首页</a></li>
+<li><a href="/html/html-tutorial.html">HTML</a></li>
+<li><a href="/css/css-tutorial.html">CSS</a></li>
+<li><a href="/js/js-tutorial.html">JavaScript</a></li>
+<a href="javascript:void(0)" class="search-reveal">Search</a>
+</ul>
+</div>
+</div>
+</div>
+<div class="container main">
+<div class="row">
+<div class="col left-column">
+<div class="tab">Java 教程</div>
+<div class="sidebar-box gallery-list">
+<div class="design" id="leftcolumn">
+<a target="_top" title="Java 教程" href="/java/java-tutorial.html">
+Java 教程 </a>
+<a target="_top" title="Java 简介" href="/java/java-intro.html">
+Java 简介 </a>
+<a target="_top" title="Java 开发环境配置" href="/java/java-environment-setup.html">
+Java 开发环境配置 </a>
+<a target="_top" title="Java 基础语法" href="/java/java-basic-syntax.html">
+Java 基础语法 </a>
+<a target="_top" title="Java 对象和类" href="/java/java-object-classes.html">
+Java 对象和类 </a>
+<a target="_top" title="Java 基本数据类型" href="/java/java-basic-datatypes.html">
+Java 基本数据类型 </a>
+<a target="_top" title="Java 变量类型" href="/java/java-variable-types.html">
+Java 变量类型 </a>
+<a target="_top" title="Java 修饰符" href="/java/java-modifier-types.html">
+Java 修饰符 </a>
+<a target="_top" title="Java 运算符" href="/java/java-operators.html">
+Java 运算符 </a>
+<a target="_top" title="Java 循环结构 &#8211; for, while 及 do&#8230;while" href="/java/java-loop.html">
+Java 循环结构 </a>
+<a target="_top" title="Java 分支结构 &#8211; if&#8230;else/switch" href="/java/java-if-else-switch.html">
+Java 分支结构 </a>
+<a target="_top" title="Java Number类" href="/java/java-number.html">
+Java Number类 </a>
+<a target="_top" title="Java Character类" href="/java/java-character.html">
+Java Character类 </a>
+<a target="_top" title="Java String类" href="/java/java-string.html">
+Java String类 </a>
+<a target="_top" title="Java StringBuffer和StringBuilder类" href="/java/java-stringbuffer.html">
+Java StringBuffer </a>
+<a target="_top" title="Java 数组" href="/java/java-array.html">
+Java 数组 </a>
+<a target="_top" title="Java 日期时间" href="/java/java-date-time.html">
+Java 日期时间 </a>
+<a target="_top" title="Java 正则表达式" href="/java/java-regular-expressions.html">
+Java 正则表达式 </a>
+<a target="_top" title="Java 方法" href="/java/java-methods.html">
+Java 方法 </a>
+<a target="_top" title="Java 流(Stream)、文件(File)和IO" href="/java/java-files-io.html">
+Java Stream、File、IO </a>
+<a target="_top" title="Java Scanner 类" href="java-scanner-class..html"> Java Scanner 类 </a> <a target="_top" title="Java 异常处理" href="/java/java-exceptions.html">
+Java 异常处理 </a>
+<br><h2 class="left">Java <span class="left_h2">面向对象</span></h2> <a target="_top" title="Java 继承" href="/java/java-inheritance.html">
+Java 继承 </a>
+<a target="_top" title="Java 重写(Override)与重载(Overload)" href="/java/java-override-overload.html">
+Java Override/Overload </a>
+<a target="_top" title="Java 多态" href="/java/java-polymorphism.html">
+Java 多态 </a>
+<a target="_top" title="Java 抽象类" href="/java/java-abstraction.html">
+Java 抽象类 </a>
+<a target="_top" title="Java 封装" href="/java/java-encapsulation.html">
+Java 封装 </a>
+<a target="_top" title="Java 接口" href="/java/java-interfaces.html">
+Java 接口 </a>
+<a target="_top" title="Java 包(package)" href="/java/java-package.html">
+Java 包(package) </a>
+<br><h2 class="left">Java <span class="left_h2">高级教程</span></h2> <a target="_top" title="Java 数据结构" href="/java/java-data-structures.html">
+Java 数据结构 </a>
+<a target="_top" title="Java 集合框架" href="/java/java-collections.html">
+Java 集合框架 </a>
+<a target="_top" title="Java 泛型" href="/java/java-generics.html">
+Java 泛型 </a>
+<a target="_top" title="Java 序列化" href="/java/java-serialization.html">
+Java 序列化 </a>
+<a target="_top" title="Java 网络编程" href="/java/java-networking.html">
+Java 网络编程 </a>
+<a target="_top" title="Java 发送邮件" href="/java/java-sending-email.html">
+Java 发送邮件 </a>
+<a target="_top" title="Java 多线程编程" href="/java/java-multithreading.html">
+Java 多线程编程 </a>
+<a target="_top" title="Java Applet基础" href="/java/java-applet-basics.html">
+Java Applet基础 </a>
+<a target="_top" title="Java 文档注释" href="/java/java-documentation.html">
+Java 文档注释 </a>
+<a target="_top" title="Java 实例" href="/java/java-examples.html">
+Java 实例 </a>
+<a target="_top" title="Java 8  新特性" href="/java/java8-new-features.html">
+Java 8 新特性 </a>
+<a target="_top" title="Java MySQL 连接" href="/java/java-mysql-connect.html">
+Java MySQL 连接 </a>
+</div>
+</div>
+</div> <div class="col middle-column">
+<div class="article">
+<div class="article-heading-ad">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;min-width:300px;max-width:970px;width:100%;height:90px" data-ad-client="ca-pub-5751451760833794" data-ad-slot="1691338467" data-ad-format="horizontal"></ins>
+<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+</div>
+<div class="previous-next-links">
+<div class="previous-design-link">← <a href="http://www.runoob.com/java/net-urldate.html" rel="prev"> Java 实例 &#8211; 获取 URL响应头的日期信息</a> </div>
+<div class="next-design-link"><a href="http://www.runoob.com/java/net-localip.html" rel="next"> Java 实例 &#8211; 获取本机ip地址及主机名</a> →</div>
+</div>
+<div class="article-body">
+<div class="article-intro" id="content">
+<h1>Java 实例 - 网页抓取
+</h1>
+<p><a href="java-examples.html"><img class="navup" src="/images/up.gif" alt="Java 实例"> Java 实例</a></p>
+<p>以下实例演示了如何使用 net.URL 类的 URL() 构造函数来抓取网页：</p>
+<pre>
+/*
+ author by w3cschool.cc
+ Main.java
+ */
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.InputStreamReader;
+import java.net.URL;
+
+public class Main {
+   public static void main(String[] args) 
+   throws Exception {
+      URL url = new URL("http://www.w3cschool.cc");
+      BufferedReader reader = new BufferedReader
+      (new InputStreamReader(url.openStream()));
+      BufferedWriter writer = new BufferedWriter
+      (new FileWriter("data.html"));
+      String line;
+      while ((line = reader.readLine()) != null) {
+         System.out.println(line);
+         writer.write(line);
+         writer.newLine();
+      }
+      reader.close();
+      writer.close();
+   }
+}
+</pre>
+<p>以上代码运行输出结果为（网页的源代码，存储在当前目录下的 data.html 文件中）：</p>
+<pre>
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset="UTF-8"/&gt; &lt;meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8"/&gt;&hellip;&hellip;
+</pre>
+<p><a href="java-examples.html"><img class="navup" src="/images/up.gif" alt="Java 实例"> Java 实例</a></p>
+</div>
+</div>
+<div class="previous-next-links">
+<div class="previous-design-link">← <a href="http://www.runoob.com/java/net-urldate.html" rel="prev"> Java 实例 &#8211; 获取 URL响应头的日期信息</a> </div>
+<div class="next-design-link"><a href="http://www.runoob.com/java/net-localip.html" rel="next"> Java 实例 &#8211; 获取本机ip地址及主机名</a> →</div>
+</div>
+<div class="sidebar-box ad-box ad-box-large">
+<div class="ad-336280" style="display: none;">
+</div>
+</div>
+</div>
+</div>
+<div class="fivecol last right-column">
+<div class="sidebar-box ad-box ad-box-large">
+<div class="sidebar-box advertise-here" style="margin: 0 auto;">
+<a href="javascript:void(0);" style="font-size: 16px; color:#64854c;font-weight:bold;">分类导航</a>
+</div>
+<div class="sidebar-box sidebar-cate">
+<div class="sidebar-tree">
+<ul><li style="margin: 0;"><a href="javascript:void(0);" class="tit">HTML / CSS</a><ul><li><a title="HTML 教程" href="http://www.runoob.com/html/html-tutorial.html">HTML 教程</a></li><li><a title="HTML5 教程" href="http://www.runoob.com/html/html5-intro.html">HTML5 教程</a></li><li><a title="CSS 教程" href="http://www.runoob.com/css/css-tutorial.html">CSS 教程</a></li><li><a title="CSS3 教程" href="http://www.runoob.com/css3/css3-tutorial.html">CSS3 教程</a></li><li><a title="Bootstrap 教程" href="http://www.runoob.com/bootstrap/bootstrap-tutorial.html">Bootstrap 教程</a></li><li><a title="Foundation 教程" href="http://www.runoob.com/foundation/foundation-tutorial.html">Foundation 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit">JavaScript</a><ul><li><a title="JavaScript 教程" href="http://www.runoob.com/js/js-tutorial.html">JavaScript 教程</a></li><li><a title="HTML DOM 教程" href="http://www.runoob.com/htmldom/htmldom-tutorial.html">HTML DOM 教程</a></li><li><a title="jQuery 教程" href="http://www.runoob.com/jquery/jquery-tutorial.html">jQuery 教程</a></li><li><a title="AngularJS 教程" href="http://www.runoob.com/angularjs/angularjs-tutorial.html">AngularJS 教程</a></li><li><a title="React 教程" href="http://www.runoob.com/react/react-tutorial.html">React 教程</a></li><li><a title="jQuery UI 教程" href="http://www.runoob.com/jqueryui/jqueryui-tutorial.html">jQuery UI 教程</a></li><li><a title="jQuery EasyUI 教程" href="http://www.runoob.com/jeasyui/jqueryeasyui-tutorial.html">jQuery EasyUI 教程</a></li><li><a title="Node.js 教程" href="http://www.runoob.com/nodejs/nodejs-tutorial.html">Node.js 教程</a></li><li><a title="AJAX 教程" href="http://www.runoob.com/ajax/ajax-tutorial.html">AJAX 教程</a></li><li><a title="JSON 教程" href="http://www.runoob.com/json/json-tutorial.html">JSON 教程</a></li><li><a title="Highcharts 教程" href="http://www.runoob.com/highcharts/highcharts-tutorial.html">Highcharts 教程</a></li><li><a title="Google 地图 教程" href="http://www.runoob.com/googleapi/google-maps-basic.html">Google 地图 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit">服务端</a><ul><li><a title="PHP 教程" href="http://www.runoob.com/php/php-tutorial.html">PHP 教程</a></li><li><a title="Python 教程" href="http://www.runoob.com/python/python-tutorial.html">Python 教程</a></li><li><a title="Python3 教程" href="http://www.runoob.com/python3/python3-tutorial.html">Python3 教程</a></li><li><a title="Django 教程" href="http://www.runoob.com/django/django-tutorial.html">Django 教程</a></li><li><a title="Linux 教程" href="http://www.runoob.com/linux/linux-tutorial.html">Linux 教程</a></li><li><a title="Docker 教程" href="http://www.runoob.com/docker/docker-tutorial.html">Docker 教程</a></li><li><a title="Ruby 教程" href="http://www.runoob.com/ruby/ruby-tutorial.html">Ruby 教程</a></li><li><a title="Java 教程" href="http://www.runoob.com/java/java-tutorial.html">Java 教程</a></li><li><a title="C 教程" href="http://www.runoob.com/c/c-tutorial.html">C 教程</a></li><li><a title="C++ 教程" href="http://www.runoob.com/cplusplus/cpp-tutorial.html">C++ 教程</a></li><li><a title="Perl 教程" href="http://www.runoob.com/perl/perl-tutorial.html">Perl 教程</a></li><li><a title="Servlet 教程" href="http://www.runoob.com/servlet/servlet-tutorial.html">Servlet 教程</a></li><li><a title="JSP 教程" href="http://www.runoob.com/jsp/jsp-tutorial.html">JSP 教程</a></li><li><a title="Lua 教程" href="http://www.runoob.com/lua/lua-tutorial.html">Lua 教程</a></li><li><a title="Scala 教程" href="http://www.runoob.com/scala/scala-tutorial.html">Scala 教程</a></li><li><a title="Go 教程" href="http://www.runoob.com/go/go-tutorial.html">Go 教程</a></li><li><a title="设计模式" href="http://www.runoob.com/design-pattern/design-pattern-tutorial.html">设计模式</a></li><li><a title="正则表达式" href="http://www.runoob.com/regexp/regexp-tutorial.html">正则表达式</a></li><li><a title="ASP 教程" href="http://www.runoob.com/asp/asp-tutorial.html">ASP 教程</a></li><li><a title="AppML 教程" href="http://www.runoob.com/appml/appml-tutorial.html">AppML 教程</a></li><li><a title="VBScript 教程" href="http://www.runoob.com/vbscript/vbscript-tutorial.html">VBScript 教程</a></li></ul></li><li style="margin: 0;"><a href="javascript:void(0);" class="tit">数据库</a><ul><li><a title="SQL 教程" href="http://www.runoob.com/sql/sql-tutorial.html">SQL 教程</a></li><li><a title="Mysql 教程" href="http://www.runoob.com/mysql/mysql-tutorial.html">Mysql 教程</a></li><li><a title="SQLite 教程" href="http://www.runoob.com/sqlite/sqlite-tutor

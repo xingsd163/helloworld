@@ -1,6 +1,8 @@
 package Process;
 
-import java.io.OutputStream;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class ProcessDemo02 {
 	
@@ -10,12 +12,20 @@ public class ProcessDemo02 {
 		   System.out.println("Creating Process...");
 		   Process p = Runtime.getRuntime().exec("netstat");
 
-		   // get the output stream
-		   OutputStream out = p.getOutputStream();
+		   // 获取输入流
+		   InputStream in = p.getInputStream();
+		   //将输入流打印输出
+		   BufferedReader bReader = new BufferedReader(new InputStreamReader(in));
+		   String line=null;
+		   while((line=bReader.readLine())!=null){
+			   System.out.println(line);
+		   }
+		   
 
 		   // close the output stream
 		   System.out.println("Closing the output stream...");
-		   out.close();
+		   in.close();
+		   
 
 		   } catch (Exception ex) {
 		   ex.printStackTrace();

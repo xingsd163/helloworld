@@ -29,8 +29,7 @@ public class RuntimeExec {
 			p= rt.exec(commands);
 			
 			InputStream is = p.getInputStream();
-			InputStreamReader isr = new InputStreamReader(is);
-			BufferedReader br = new BufferedReader(isr);
+			BufferedReader br = new BufferedReader(new InputStreamReader(is));
 			String line;
 			while ((line=br.readLine())!=null) {
 				System.out.println(line);
