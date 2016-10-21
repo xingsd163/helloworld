@@ -45,6 +45,7 @@ public class SimpleProducer {
 			producer.send(data);
 		}
 		// Close producer connection with broker.
+		System.out.println();
 		producer.close();
 	}
 }
