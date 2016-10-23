@@ -40,7 +40,6 @@ public class CreateStatementDemo02 {
 			MysqlConnectDemo01.closeConnection(connection);
 		}
 		
-		System.out.println(connection);
 		
 		
 		
