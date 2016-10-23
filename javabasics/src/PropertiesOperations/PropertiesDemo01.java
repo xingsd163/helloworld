@@ -7,17 +7,21 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-//¶ÁÈ¡ÊôÐÔÎÄ¼þÖÐµÄÔªËØ
+//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ðµï¿½Ôªï¿½ï¿½
 
 public class PropertiesDemo01 {
 
 
 	/**
 	 * @author Nathan
+	 * @throws IOException 
 	 */
-	public static void main(String[] args) {
-		File myfile = new File("E:\\Workspaces\\JavaBasics\\javabasics\\src\\PropertiesOperations\\dbconnection.txt");
-		//ÔÚ try Óï¾ä¿éÍâÏÈÉùÃ÷ FileInputStream ±äÁ¿
+	public static void main(String[] args) throws IOException {
+		File myfile = new File("dbconnection.txt");
+		//ï¿½ï¿½ try ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ FileInputStream ï¿½ï¿½ï¿½ï¿½
+		if(!myfile.exists()){
+			myfile.createNewFile();
+		}
 		FileInputStream fis = null;
 		try {
 			fis = new FileInputStream(myfile);
@@ -27,7 +31,7 @@ public class PropertiesDemo01 {
 		}
 		Properties p1 = new Properties();
 		try {
-			//¼ÓÔØ
+			//ï¿½ï¿½ï¿½ï¿½
 			p1.load(fis);
 		} catch (IOException e) {
 			
@@ -35,7 +39,7 @@ public class PropertiesDemo01 {
 		}
 		
 		Enumeration<?> enu = p1.propertyNames();
-		//±éÀúËùÓÐÔªËØ
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
 		while(enu.hasMoreElements()){
 			
 			String key = (String) enu.nextElement();

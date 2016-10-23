@@ -1,6 +1,15 @@
 package JDBCDemo;
 
 import java.io.InputStream;
+
+/*
+ * 连接Oracle数据库通常用配置文件
+ * 连接MySQL数据库
+ * 
+ * 
+ */
+
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
